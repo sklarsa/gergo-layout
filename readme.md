@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.org/sklarsa/gergo-layout.svg?branch=master)
+
 # [Gergo! By g Heavy Industries](http://gboards.ca)
 
 This is my custom layout for the Gergo keyboard.
