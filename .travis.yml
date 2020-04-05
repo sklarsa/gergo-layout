@@ -3,6 +3,7 @@ install:
   - cd ../../ && mkdir qmk && git clone https://github.com/qmk/qmk_firmware.git && cd qmk_firmware
   - sudo ./util/qmk_install.sh
   - echo $HOME
+  - pwd
   - ln -s $HOME/build/sklarsa/gergo-layout $HOME/build/qmk/qmk_firmware/keyboards/gergo/keymaps/sklarsa
   - make git-submodule
 
