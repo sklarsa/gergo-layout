@@ -1,9 +1,6 @@
-language: python
-python:
-  - "3.7"
 install:
+  - sudo apt-get install python3-setuptools
   - git clone https://github.com/qmk/qmk_firmware.git && cd qmk_firmware
-  - pip install --upgrade setuptools
   - sudo ./util/qmk_install.sh
   - pushd .. && ln -s `pwd`/gergo-layout `pwd`/qmk_firmware/keyboards/gergo/sklarsa && popd
 
