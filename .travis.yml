@@ -2,7 +2,8 @@ install:
   - sudo apt-get install python3-setuptools
   - git clone https://github.com/qmk/qmk_firmware.git && cd qmk_firmware
   - sudo ./util/qmk_install.sh
-  - ln -s $HOME/build/gergo-layout $HOME/build/qmk_firmware/keyboards/gergo/keymaps/sklarsa
+  - pwd
+  - ln -s $HOME/gergo-layout $HOME/qmk_firmware/keyboards/gergo/keymaps/sklarsa
   - make git-submodule
 
 script:
