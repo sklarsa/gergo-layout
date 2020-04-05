@@ -5,4 +5,4 @@ install:
   - pushd .. && ln -s `pwd`/gergo-layout `pwd`/qmk_firmware/keyboards/gergo/sklarsa && popd
 
 script:
-  - cd qmk_firmware && make gergo:sklarsa
+  - make gergo:sklarsa
