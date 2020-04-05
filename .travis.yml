@@ -1,10 +1,7 @@
-language: python
-python:
-  - "3.7"
-
 install:
-  - pip install qmk
-  - qmk setup
+  - git clone https://github.com/qmk/qmk_firmware.git && cd qmk_firmware
+  - sudo ./util/qmk_install.sh
+  - pushd .. && ln -s `pwd`/gergo-layout `pwd`/qmk_firmware/keyboards/gergo/sklarsa && popd
 
 script:
-  - qmk compile -kb gergo -km ./
+  - cd qmk_firmware && make gergo:sklarsa
