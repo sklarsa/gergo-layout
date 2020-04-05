@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/sklarsa/gergo-layout.svg?branch=master)
+[![Build Status](https://travis-ci.org/sklarsa/gergo-layout.svg?branch=master)]((https://travis-ci.org/sklarsa/gergo-layout)
 
 # [Gergo! By g Heavy Industries](http://gboards.ca)
 
