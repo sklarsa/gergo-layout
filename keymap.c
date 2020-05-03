@@ -25,11 +25,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,-------------------------------------------.                         ,-------------------------------------------.
- * | L1/ESC |   Q  |   W  |   E  |   R  |   T  |                         |   Y  |   U  |   I  |   O  |   P  |  | \   |
+ * | L1/ESC |   Q  |   W  |   E  |   R  |   T  |                         |   Y  |   U  |   I  |   O  |   P  |   BS   |
  * |--------+------+------+------+------+------|------.           .------|------+------+------+------+------+--------|
- * |Ctrl/BS |   A  |   S  |  D   |   F  |   G  | RMB  |           |      |   H  |   J  |   K  |   L  | ;  : |  ' "   |
+ * |Ctrl/BS |   A  |   S  |  D   |   F  |   G  |      |           |      |   H  |   J  |   K  |   L  | ;  : |  ' "   |
  * |--------+------+------+------+------+------|------|           |------|------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  | LMB  |           |      |   N  |   M  | ,  < | . >  | /  ? |  - _   |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  | ,  < | . >  | /  ? |  - _   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *                    .----------.   .-------.                                 .------.   .-----.
  *                    | Super/Del|   |Ent/ALT|                                 | Tab  |   |BKSP |
@@ -43,10 +43,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                 `--------------'                      `--------------'
  */
 [BASE] = LAYOUT_gergo(
-    LT(NUMB, KC_ESC),       KC_Q,  KC_W,   KC_E,   KC_R, KC_T,                                          KC_Y,    KC_U, KC_I, KC_O,   KC_P,    KC_PIPE,
-    MT(MOD_LCTL, KC_BSPC),  KC_A,  KC_S,   KC_D,   KC_F, KC_G, KC_BTN2,                          ____,  KC_H,    KC_J, KC_K, KC_L,   KC_SCLN, KC_QUOT,
-    KC_RSFT,                KC_Z,  KC_X,   KC_C,   KC_V, KC_B, KC_BTN1, KC_BTN3,     KC_PGDN, KC_BSPC,  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS,
-  MT(MOD_LGUI, KC_DEL), MT(MOD_LALT, KC_ENT), LT(SYMB, KC_SPC), LT(NUMB, KC_ESC),    LT(SYMB, KC_ENT), LT(NUMB, KC_SPC), KC_TAB, KC_BSPC
+    KC_TAB,            KC_Q,  KC_W,   KC_E,   KC_R, KC_T,                                KC_Y,    KC_U, KC_I, KC_O,   KC_P,    KC_BSPC,
+    LT(NUMB, KC_ESC),  KC_A,  KC_S,   KC_D,   KC_F, KC_G, ____,                          ____,  KC_H,    KC_J, KC_K, KC_L,   KC_SCLN, LT(MOD_LGUI, KC_QUOT),
+    KC_RSFT,                KC_Z,  KC_X,   KC_C,   KC_V, KC_B, ____, ____,     KC_PGDN, KC_BSPC,  KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_MINS,
+  MT(MOD_LALT, KC_DEL), MT(MOD_LGUI, KC_ENT), LT(SYMB, KC_SPC), LT(NUMB, KC_ESC),    LT(SYMB, KC_ENT), LT(NUMB, KC_SPC), KC_RCTRL, KC_BSPC
     ),
 /* Keymap 1: Symbols layer
  *
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [NUMB] = LAYOUT_gergo(
        ____, KC_1, 	  KC_2,    KC_3,    KC_4,    KC_5,                                             KC_6,    KC_7,    KC_8,    KC_9,    KC_0,       ____,
        ____, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                            ____,     ____,    ____, KC_UP,       ____, KC_VOLD, KC_VOLU,
-       ____, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,     ____,        ____,    ____,     ____, KC_MS_D, KC_DOWN, KC_RIGHT, KC_MPLY, KC_MNXT,
+       ____, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,     ____,        ____,    ____,     ____, KC_LEFT, KC_DOWN, KC_RIGHT, KC_MPLY, KC_MNXT,
                                            ____,    ____,    ____,    ____,            ____,     ____,    ____,    ____
     ),
 };
